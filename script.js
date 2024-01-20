@@ -6,4 +6,11 @@ const user = {
     }
 }
 
-console.log(user.getUserDetails())
+function userDetails(username, loginCount) {
+    this.username = username
+    this.loginCount = loginCount
+    return this
+}
+
+let userOne = new userDetails("Ali", 2)
+console.log(userOne)
