@@ -13,4 +13,7 @@ function userDetails(username, loginCount) {
 }
 
 let userOne = new userDetails("Ali", 2)
+let userTwo = new userDetails("Hamza", 9)
 console.log(userOne)
+console.log(userTwo)
+console.log(userTwo.constructor)
