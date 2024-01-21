@@ -29,20 +29,35 @@
 
 
 //prototype
-function Employee(username, age, salary){
-    this.username = username
-    this.age = age
-    this.salary = salary
-    return this
+// function Employee(username, age, salary){
+//     this.username = username
+//     this.age = age
+//     this.salary = salary
+//     return this
+// }
+
+// Employee.prototype.addBonus = function(salary) {
+//     const newSal = this.salary + 5000
+//     console.log(newSal)
+// }
+
+// const emp1 = new Employee("Adil", 35, 45000)
+// const emp2 = new Employee("Adeel", 67, 89000)
+
+// emp1.addBonus()
+// emp2.addBonus()
+
+//Injecting method to object
+const superHeroes = ["Batman", "Spiderman"]
+
+const heroPower = {
+    Batman: "bats",
+    Spiderman: "sling"
 }
 
-Employee.prototype.addBonus = function(salary) {
-    const newSal = this.salary + 5000
-    console.log(newSal)
+Object.prototype.askPower = function() {
+    console.log(`Powers and Heroes`)
 }
 
-const emp1 = new Employee("Adil", 35, 45000)
-const emp2 = new Employee("Adeel", 67, 89000)
-
-emp1.addBonus()
-emp2.addBonus()
+superHeroes.askPower()
+heroPower.askPower()
