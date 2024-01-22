@@ -48,16 +48,30 @@
 // emp2.addBonus()
 
 //Injecting method to object
-const superHeroes = ["Batman", "Spiderman"]
+// const superHeroes = ["Batman", "Spiderman"]
 
-const heroPower = {
-    Batman: "bats",
-    Spiderman: "sling"
+// const heroPower = {
+//     Batman: "bats",
+//     Spiderman: "sling"
+// }
+
+// Object.prototype.askPower = function() {
+//     console.log(`Powers and Heroes`)
+// }
+
+// superHeroes.askPower()
+// heroPower.askPower()
+
+function setUsername(username) {
+    this.username = username
 }
 
-Object.prototype.askPower = function() {
-    console.log(`Powers and Heroes`)
+function createUser(username, password, email) {
+    setUsername.call(username)
+
+    this.password = password
+    this.email = email
 }
 
-superHeroes.askPower()
-heroPower.askPower()
+let newUser = new createUser("Ali", "123", "email@exam.com")
+console.log(newUser)
