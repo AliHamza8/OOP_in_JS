@@ -62,16 +62,45 @@
 // superHeroes.askPower()
 // heroPower.askPower()
 
-function setUsername(username) {
+// function setUsername(username) {
+//     this.username = username
+// }
+
+// function createUser(username, password, email) {
+//     setUsername.call(this, username)
+
+//     this.password = password
+//     this.email = email
+// }
+
+// let newUser = new createUser("Ali", "123", "email@exam.com")
+// console.log(newUser)
+
+// class User {
+//     constructor(username, password, email) {
+//         this.username = username
+//         this.password = password
+//         this.email = email
+//     }
+
+//     encryptPassword() {
+//         return `${this.password}123`
+//     }
+// }
+
+// const newUser = new User("Ali", "abc", "email@gmail.com")
+// console.log(newUser.encryptPassword())
+
+
+function User(username, password, email) {
     this.username = username
-}
-
-function createUser(username, password, email) {
-    setUsername.call(this, username)
-
     this.password = password
     this.email = email
 }
 
-let newUser = new createUser("Ali", "123", "email@exam.com")
-console.log(newUser)
+User.prototype.encryptPassword = function() {
+    return `${this.password}123`
+}
+
+const newUser = new User("Ali", "abc", "email@gmail.com")
+console.log(newUser.encryptPassword())
